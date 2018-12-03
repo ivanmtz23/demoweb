@@ -6,21 +6,29 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#">Demo</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="/contact">Contact</a>
+        <a class="nav-link" href="/articledetails">Article Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/article">Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories">Categories</a>
       </li>
 
+       <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+
+
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
   </div>
   </div>
 </nav>

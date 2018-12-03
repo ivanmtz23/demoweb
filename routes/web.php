@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -19,10 +20,33 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
+Route::get('/articledetails', function () {
     return view('contact');
 });
 
-Route::get('/messages', 'MessagesController@getMessages');
+Route::get('/article', 'MessagesController@getMessages');
 
-Route::post('/contact/submit', 'MessagesController@submit');
+Route::get('/categories', 'MessagesController@getCategories');
+
+Route::post('/articledetails/submit', 'MessagesController@submit');
+
+Route::get('/login', 'LoginController@index');
+
+Route::post('/checklogin', 'LoginController@checklogin');
+Route::get('/logout', 'LoginController@logout');
+
+Route::get('/upload', 'UploadController@uploadForm');
+Route::post('/upload', 'UploadController@uploadSubmit');
+
+Route::resource('showarticle', 'PostController');
+Route::resource('showusers', 'UserController');
+
+Route::get('qr-code', function () {
+    return QrCode::size(500)->generate(url()->current());
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/showusers', 'AllusersController@getData');
